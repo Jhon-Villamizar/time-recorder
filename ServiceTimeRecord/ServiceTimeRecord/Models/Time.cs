@@ -17,5 +17,6 @@ namespace ServiceTimeRecord.Models
         [Required]
         public int Hours { get; set; }
         public Task Task { get; set; }
+        public int TaskId { get; set; }
     }
 }

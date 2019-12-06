@@ -96,3 +96,7 @@ C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\bin\EntityFramework.xm
 C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\bin\EntityFramework.SqlServer.xml
 C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\obj\Debug\ServiceTimeRecord.Migrations.InitMigration.resources
 C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\obj\Debug\ServiceTimeRecord.csproj.GenerateResource.cache
+C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\obj\Debug\ServiceTimeRecord.Migrations.ChangeTaskId.resources
+C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\bin\System.Web.Cors.dll
+C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\bin\System.Web.Http.Cors.dll
+C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\bin\System.Web.Http.Cors.xml
