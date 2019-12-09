@@ -11,12 +11,12 @@ namespace ServiceTimeRecord.Models
     public class Time
     {
         [Key]
-        public int Id { get; set; }
+        public int id { get; set; }
         [Required]
-        public DateTime Date { get; set; }
+        public DateTime date { get; set; }
         [Required]
-        public int Hours { get; set; }
-        public Task Task { get; set; }
-        public int TaskId { get; set; }
+        public int hours { get; set; }
+        public Task task { get; set; }
+        public int taskId { get; set; }
     }
 }

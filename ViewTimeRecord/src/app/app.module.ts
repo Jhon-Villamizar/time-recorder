@@ -5,15 +5,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
-import { HomeComponent } from './componnets/home/home.component';
-import { RegistryComponent } from './componnets/registry/registry.component';
+import { TasksComponent } from './components/tasks/tasks.component';
+import { TimesComponent } from './components/times/times.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent,
-    RegistryComponent
+    TasksComponent,
+    TimesComponent
   ],
   imports: [
     BrowserModule,

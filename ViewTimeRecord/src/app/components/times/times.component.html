@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card my-5">
+        <div class="card-header">
+					<h5 class="card-title">Times registry</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Here you can registry times and dates of tasks</p>
+          <form #timeForm="ngForm" (ngSubmit)="sendTime(timeForm)" class="row">
+            <div class="form-group">
+              <input id="id" type="hidden" class="form-control" name="id" #id="ngModel"
+                [(ngModel)]="timeService.selectTime.id">
+            </div>
+            <div class="form-group col-md-6">
+              <input id="date" type="date" class="form-control" name="date" #date="ngModel"
+								[(ngModel)]="timeService.selectTime.date" placeholder="Date*">
+								<p *ngIf="dates">* required field</p>
+            </div>
+            <div class="form-group col-md-6">
+              <input id="hours" type="number" class="form-control" name="hours" #hours="ngModel"
+								[(ngModel)]="timeService.selectTime.hours" placeholder="Hours*">
+								<p *ngIf="hour">* required field</p>
+            </div>
+            <div class="form-group">
+              <input id="taskId" type="hidden" class="form-control" name="taskId" #taskId="ngModel"
+                [(ngModel)]="timeService.selectTime.taskId" placeholder="TaskId*">
+            </div>
+            <div class="form-group col-md-12">
+								<button type="submit" class="btn btn-primary float-right">Submit <i class="far fa-paper-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Hours</th>
+            </tr>
+          </thead>
+          <tbody id="times">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,44 @@
-<p>login works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mt-5">
+      <button class="btn btn-danger btn-logout float-right" (click)="logout()" *ngIf="task"><i class="fas fa-sign-out-alt"></i></button>
+      
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="login">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card my-5">
+        <div class="card-header">
+          <h5 class="card-title">Login</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">You must be registered or speak with your supervisor.</p>
+          <form #loginForm="ngForm" (ngSubmit)="sendLogin(loginForm)">
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-smile"></i></span>
+              </div>
+              <input type="text" name="name" id="name" class="form-control" #name="ngModel"
+                [(ngModel)]="employeeService.SelectEmployee.name" placeholder="Name*">
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input type="password" name="password" id="password" class="form-control" #password="ngModel"
+                [(ngModel)]="employeeService.SelectEmployee.password" placeholder="Password*">
+            </div>
+            <div class="form-group">
+              <button type="submit"class="btn float-right login_btn btn-primary">Login <i class="fas fa-sign-in-alt"></i></button>
+            </div>
+            <p *ngIf="fieldsEmpty">* All fields are <b>Required</b></p>
+            <p *ngIf="nonUser">* <b>Unregistered</b> User</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-tasks *ngIf='task'></app-tasks>

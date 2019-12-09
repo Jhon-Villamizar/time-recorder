@@ -184,6 +184,10 @@
     <Compile Include="Migrations\201912060232499_ChangeTaskId.designer.cs">
       <DependentUpon>201912060232499_ChangeTaskId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912082346269_changeModel.cs" />
+    <Compile Include="Migrations\201912082346269_changeModel.designer.cs">
+      <DependentUpon>201912082346269_changeModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\RegistryContext.cs" />
@@ -283,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912060232499_ChangeTaskId.resx">
       <DependentUpon>201912060232499_ChangeTaskId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912082346269_changeModel.resx">
+      <DependentUpon>201912082346269_changeModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

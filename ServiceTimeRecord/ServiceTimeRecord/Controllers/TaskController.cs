@@ -24,7 +24,7 @@ namespace ServiceTimeRecord.Controllers
         {
             using (var context = new RegistryContext())
             {
-                return context.Tasks.FirstOrDefault(x => x.Id == id);
+                return context.Tasks.FirstOrDefault(x => x.id == id);
             }
         }
 
@@ -44,10 +44,10 @@ namespace ServiceTimeRecord.Controllers
         {
             using (var context = new RegistryContext())
             {
-                var taskAct = context.Tasks.FirstOrDefault(x => x.Id == task.Id);
-                taskAct.Name = task.Name;
-                taskAct.Description = task.Description;
-                taskAct.EmployeeId = task.EmployeeId;
+                var taskAct = context.Tasks.FirstOrDefault(x => x.id == task.id);
+                taskAct.name = task.name;
+                taskAct.description = task.description;
+                taskAct.employeeId = task.employeeId;
                 context.SaveChanges();
                 return task;
             }
@@ -58,7 +58,7 @@ namespace ServiceTimeRecord.Controllers
         {
             using (var context = new RegistryContext())
             {
-                var employeeDel = context.Tasks.FirstOrDefault(x => x.Id == id);
+                var employeeDel = context.Tasks.FirstOrDefault(x => x.id == id);
                 context.Tasks.Remove(employeeDel);
                 context.SaveChanges();
                 return true;

@@ -100,3 +100,4 @@ C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\obj\Debug\ServiceTimeR
 C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\bin\System.Web.Cors.dll
 C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\bin\System.Web.Http.Cors.dll
 C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\bin\System.Web.Http.Cors.xml
+C:\Jhon\time-recorder\ServiceTimeRecord\ServiceTimeRecord\obj\Debug\ServiceTimeRecord.Migrations.changeModel.resources

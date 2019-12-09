@@ -24,7 +24,7 @@ namespace ServiceTimeRecord.Controllers
         {
             using (var context = new RegistryContext())
             {
-                return context.Employees.FirstOrDefault(x=>x.Id==id);
+                return context.Employees.FirstOrDefault(x=>x.id==id);
             }
         }
 
@@ -44,10 +44,10 @@ namespace ServiceTimeRecord.Controllers
         {
             using (var context = new RegistryContext())
             {
-                var employeeAct = context.Employees.FirstOrDefault(x => x.Id == employee.Id);
-                employeeAct.Name = employee.Name;
-                employeeAct.Password = employee.Password;
-                employeeAct.Tasks = employee.Tasks;
+                var employeeAct = context.Employees.FirstOrDefault(x => x.id == employee.id);
+                employeeAct.name = employee.name;
+                employeeAct.password = employee.password;
+                employeeAct.tasks = employee.tasks;
                 context.SaveChanges();
                 return employee;
             }
@@ -58,7 +58,7 @@ namespace ServiceTimeRecord.Controllers
         {
             using (var context = new RegistryContext())
             {
-                var employeeDel = context.Employees.FirstOrDefault(x => x.Id == id);
+                var employeeDel = context.Employees.FirstOrDefault(x => x.id == id);
                 context.Employees.Remove(employeeDel);
                 context.SaveChanges();
                 return true;
@@ -67,22 +67,26 @@ namespace ServiceTimeRecord.Controllers
 
         //funcion que busca un usuario por email
         [HttpGet]
-        public bool Login(string name, string password)
+        public int Login(string name, string password)
         {
             using (var context = new RegistryContext())
             {
-                var employee = context.Employees.FirstOrDefault(x => x.Name == name);
-                if (name == null)
+                var employee = context.Employees.FirstOrDefault(x => x.name == name);
+                if (name == "" || name == null || password == "" || password == null)
                 {
-                    return false;
+                    return 0;
                 }
                 else
                 {
-                    if (employee.Name == name && employee.Password == password)
+                    if (employee == null)
                     {
-                        return true;
+                        return 0;
                     }
-                    return false;
+                    if (employee.name == name && employee.password == password)
+                    {
+                        return employee.id;
+                    }
+                    return 0;
                 }
             }
         }

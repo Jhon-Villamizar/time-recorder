@@ -11,14 +11,14 @@ namespace ServiceTimeRecord.Models
     public class Task
     {
         [Key]
-        public int Id { get; set; }
+        public int id { get; set; }
         [Required]
         [MaxLength(40)]
-        public string Name { get; set; }
+        public string name { get; set; }
         [Required]
-        public string Description { get; set; }
-        public ICollection<Time> Times { get; set; }
-        public Employee Employee { get; set; }
-        public int EmployeeId { get; set; }
+        public string description { get; set; }
+        public ICollection<Time> times { get; set; }
+        public Employee employee { get; set; }
+        public int employeeId { get; set; }
     }
 }
